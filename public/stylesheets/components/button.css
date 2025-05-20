@@ -1,0 +1,39 @@
+:root {
+    --btn-padding: 10px;
+    --btn-borderRadius: 40px;
+    --btn-color: tomato;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    min-width: 6vw;
+
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    
+    border-radius: var(--btn-borderRadius);
+
+    transition: 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-solid {
+    background-color: var(--btn-color);
+    color: #FFF;
+}
+
+.btn-solid:is(:hover, :focus) {
+    background-color: #fb4d2e;
+}
+
+.btn-outlined {
+    background-color: transparent;
+    color: var(--btn-color);
+
+    border: 3px solid tomato;
+}
+
+.btn-outlined:is(:hover, :focus) {
+    background-color: var(--btn-color);
+    color: #FFF;
+}

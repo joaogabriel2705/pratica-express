@@ -1,0 +1,27 @@
+### insert user
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name": "Beltrano teste",
+    "email": "beltrano@email.com",
+    "password": "senhascreta123"
+}
+
+### get all users
+GET http://localhost:3000/user
+
+### updating a user by id
+
+PUT http://localhost:3000/user/2
+Content-Type: application/json
+
+{
+    "name": "Ciclano alterado",
+    "email": "ciclano@email.com",
+    "password": "senhascreta"
+}
+
+### delete a user by id
+DELETE http://localhost:3000/user/3

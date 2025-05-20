@@ -1,0 +1,14 @@
+<header class="app-header">
+    <h1 class="header__title">
+        {{#if isLogin}}
+            Olá {{user}}!   
+        {{else}}
+            Olá visitante!
+        {{/if}}
+    </h1>
+
+    <nav class="header__navigation">
+        <a href="/signin" class="btn btn-solid">Cadastrar</a>
+        <a href="/login" class="btn btn-outlined">Entrar</a>
+    </nav>
+</header>
