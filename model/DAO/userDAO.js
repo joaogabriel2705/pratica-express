@@ -17,6 +17,22 @@ export const getAllUsers = async () => {
     }
 }
 
+export const getUser = async (id) => {
+    try {
+        const statement = await connection();
+
+        const SQL = "SELECT * FROM user WHERE `id` = ?";
+
+        const [result] = await statement.execute(SQL, [id]);
+
+        await statement.end();
+
+        return result;
+    } catch (err) {
+        console.error(`Erro ao achar usuário: ${err}`);
+    }
+}
+
 
 export const insertUser = async (name, email, password) => {
     try {
